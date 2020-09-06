@@ -2,7 +2,7 @@ import pytorch_lightning as pl
 import torch
 import torch.nn.functional as F
 
-from alexnet.alexnet import AlexNet
+from alexnet.alexnet_module import AlexNet
 
 
 class LitModel(pl.LightningModule):
