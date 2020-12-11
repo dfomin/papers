@@ -27,7 +27,7 @@ class AlexNet(nn.Module):
         x = F.relu(self.conv4(x))
         x = F.relu(self.conv5(x))
         x = self.pool(x)
-        x = x.view(-1)
+        x = x.view(-1, 256 * 6 * 6)
         x = self.dropout(self.linear1(x))
         x = self.dropout(self.linear2(x))
         x = F.softmax(self.linear3(x), dim=0)
